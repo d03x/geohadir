@@ -1,3 +1,4 @@
+import 'package:app_mobile/logger/logger.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 
 class NotificationController {
@@ -6,7 +7,7 @@ class NotificationController {
     ReceivedAction receivedAction,
   ) async {
     if (receivedAction.buttonKeyPressed == 'BUKA_CHAT') {
-      print('hhahahellow');
+      logger.info('hhahahellow');
     }
   }
 }

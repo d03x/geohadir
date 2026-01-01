@@ -1,3 +1,4 @@
+import 'package:app_mobile/logger/logger.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -9,7 +10,7 @@ class FirebaseMessaingBackgroundHandler {
   ) async {
     await Firebase.initializeApp();
     if (message.notification != null) {
-      print(message.notification!.toMap());
+      logger.info(message.notification!.toMap());
       AwesomeNotifications().createNotification(
         content: NotificationContent(
           id: 10,
