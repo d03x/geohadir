@@ -1,7 +1,6 @@
-import 'package:app_mobile/app/notifications/notification_controller.dart';
 import 'package:app_mobile/providers/firebase_messaing_provider.dart';
+import 'package:app_mobile/providers/local_notification_provider.dart';
 import 'package:app_mobile/routers/routers.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,19 +10,10 @@ class MainApp extends HookConsumerWidget {
   const MainApp({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    useEffect(() {
-      AwesomeNotifications().setListeners(
-        onActionReceivedMethod: NotificationController.onActionReceivedMethod,
-      );
-      AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
-        if (!isAllowed) {
-          AwesomeNotifications().requestPermissionToSendNotifications();
-        }
-      });
-      return null;
-    }, []);
     final firebseProvider = ref.watch(firebaseMessagingProvider);
+    final localNotificaion = ref.watch(localNotificationProvider);
     useEffect(() {
+      localNotificaion.setup();
       firebseProvider.setup();
       firebseProvider.listenMessaing();
       return null;

@@ -11,7 +11,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   NotifcationIntialize.initialize();
-
   await Future.wait([dotenv.load(), Firebase.initializeApp()]).whenComplete(() {
     logger.info("App Initialized");
   });
