@@ -1,4 +1,5 @@
 import 'package:app_mobile/app/notifications/notification_controller.dart';
+import 'package:app_mobile/providers/firebase_messaing_provider.dart';
 import 'package:app_mobile/routers/routers.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,12 @@ class MainApp extends HookConsumerWidget {
           AwesomeNotifications().requestPermissionToSendNotifications();
         }
       });
+      return null;
+    }, []);
+    final firebseProvider = ref.watch(firebaseMessagingProvider);
+    useEffect(() {
+      firebseProvider.setup();
+      firebseProvider.listenMessaing();
       return null;
     }, []);
     final screenSize = const Size(414, 896);

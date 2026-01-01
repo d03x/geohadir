@@ -1,3 +1,4 @@
+import 'package:app_mobile/extensions/typography_extension.dart';
 import 'package:app_mobile/logger/logger.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,10 @@ class AuthLoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("WELLCOME"), leading: null),
+      appBar: AppBar(
+        title: Text("WELLCOME", style: context.textTheme.bodyLarge),
+        leading: null,
+      ),
       body: SafeArea(
         child: IconButton(
           onPressed: () {
