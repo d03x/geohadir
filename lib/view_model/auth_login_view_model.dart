@@ -1,4 +1,4 @@
-import 'package:app_mobile/model/auth/auth_response_model.dart';
+import 'package:app_mobile/models/auth/auth_response_model.dart';
 import 'package:app_mobile/providers/auth_provider.dart';
 import 'package:app_mobile/providers/state/auth_login_state.dart';
 import 'package:app_mobile/repository/auth_repository.dart';

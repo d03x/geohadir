@@ -1,4 +1,4 @@
-import 'package:app_mobile/extensions/theme_extension.dart';
+import 'package:app_mobile/core/extensions/theme_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart'; // Asumsi kamu pakai ini
 

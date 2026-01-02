@@ -1,5 +1,5 @@
-import 'package:app_mobile/model/auth/auth_jwt_model.dart';
-import 'package:app_mobile/model/user/user_model.dart';
+import 'package:app_mobile/models/auth/auth_jwt_model.dart';
+import 'package:app_mobile/models/user/user_model.dart';
 
 class AuthLoginResponseModel {
   AuthJwtModel? jwt;

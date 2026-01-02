@@ -1,7 +1,7 @@
 import 'package:app_mobile/providers/firebase_messaing_provider.dart';
 import 'package:app_mobile/providers/local_notification_provider.dart';
-import 'package:app_mobile/routers/routers.dart';
-import 'package:app_mobile/themes/app_ui_theme.dart';
+import 'package:app_mobile/core/routers/routers.dart';
+import 'package:app_mobile/core/themes/app_ui_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

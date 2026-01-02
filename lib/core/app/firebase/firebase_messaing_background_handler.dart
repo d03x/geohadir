@@ -1,4 +1,4 @@
-import 'package:app_mobile/logger/logger.dart';
+import 'package:app_mobile/core/logger/logger.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';

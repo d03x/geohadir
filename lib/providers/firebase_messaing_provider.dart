@@ -1,4 +1,4 @@
-import 'package:app_mobile/logger/logger.dart';
+import 'package:app_mobile/core/logger/logger.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

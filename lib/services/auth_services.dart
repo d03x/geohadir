@@ -1,4 +1,4 @@
-import 'package:app_mobile/network/http_client.dart';
+import 'package:app_mobile/core/network/http_client.dart';
 import 'package:dio/dio.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

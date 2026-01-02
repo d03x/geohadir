@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:app_mobile/network/interceptor.dart';
+import 'package:app_mobile/core/network/interceptor.dart';
 import 'package:app_mobile/providers/app_config_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

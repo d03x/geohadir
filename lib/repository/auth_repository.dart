@@ -1,5 +1,5 @@
-import 'package:app_mobile/model/auth/auth_response_model.dart';
-import 'package:app_mobile/model/user/user_model.dart';
+import 'package:app_mobile/models/auth/auth_response_model.dart';
+import 'package:app_mobile/models/user/user_model.dart';
 import 'package:app_mobile/services/auth_services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
