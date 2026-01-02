@@ -13,7 +13,8 @@ class MainApp extends HookConsumerWidget {
     final firebseProvider = ref.watch(firebaseMessagingProvider);
     final localNotificaion = ref.watch(localNotificationProvider);
     useEffect(() {
-      localNotificaion.setup();
+      //add setup context
+      localNotificaion.setup(context);
       firebseProvider.setup();
       firebseProvider.listenMessaing();
       return null;

@@ -17,7 +17,7 @@ class FirebaeMessaingProvider {
       logger.info('FCM:TOKEN $fcm');
     }
   }
-
+  
   void listenMessaing() {
     FirebaseMessaging.onMessage.listen((event) {
       if (event.notification != null) {
