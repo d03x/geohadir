@@ -46,6 +46,7 @@ dependencies:
   firebase_core: ^4.3.0
   talker_logger: ^5.1.9
   google_fonts: ^6.3.3
+  flex_color_scheme: ^8.4.0
 
 dev_dependencies:
   flutter_test:

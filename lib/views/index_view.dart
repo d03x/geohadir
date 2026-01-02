@@ -8,6 +8,7 @@ class IndexView extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
+      appBar: AppBar(title: Text("HELO WORLD")),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           context.pushNamed('signIn');

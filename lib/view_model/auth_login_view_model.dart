@@ -14,8 +14,9 @@ class AuthLoginViewModel extends Notifier<AuthState> {
     state = AuthLoadingState();
     try {
       await authServices.login(email: email, password: password);
+      state = AuthState();
     } catch (e) {
-      print(e);
+      state = AuthState();
     }
   }
 }

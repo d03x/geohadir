@@ -1,3 +1,4 @@
+import 'package:app_mobile/extensions/theme_extension.dart';
 import 'package:app_mobile/state/auth_login_state.dart';
 import 'package:app_mobile/view_model/auth_login_view_model.dart';
 import 'package:app_mobile/widgets/input_field.dart';
@@ -59,7 +60,7 @@ class AuthLoginView extends HookConsumerWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 42.sp, // Font sangat besar
                   fontWeight: FontWeight.w600,
-                  color: Colors.black87,
+                  color: context.colors.onSurface,
                   height: 1.1, // Line height rapat
                 ),
               ),
@@ -68,7 +69,7 @@ class AuthLoginView extends HookConsumerWidget {
                 "Silakan masuk dengan kredensial kantor.",
                 style: GoogleFonts.poppins(
                   fontSize: 14.sp,
-                  color: Colors.grey.shade500,
+                  color: context.colors.onSurface.withValues(alpha: 0.5),
                 ),
               ),
 
@@ -88,7 +89,6 @@ class AuthLoginView extends HookConsumerWidget {
                 label: "Kata Sandi",
                 hint: "••••••••",
                 icon: Icons.lock_outline,
-                // isPassword: true,
               ),
 
               SizedBox(height: 16.h),
@@ -119,8 +119,8 @@ class AuthLoginView extends HookConsumerWidget {
                         );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // Tombol Hitam Penuh
-                    foregroundColor: Colors.white,
+                    backgroundColor: context.colors.primary,
+                    foregroundColor: context.colors.onPrimary,
                     elevation: 0, // Tanpa shadow (Flat)
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.r),
@@ -139,7 +139,11 @@ class AuthLoginView extends HookConsumerWidget {
                         ),
                       ),
                       SizedBox(width: 8.w),
-                      Icon(Icons.arrow_forward_rounded, size: 20.sp),
+                      Icon(
+                        Icons.arrow_forward_rounded,
+                        size: 20.sp,
+                        color: context.colors.onPrimary,
+                      ),
                     ],
                   ),
                 ),
