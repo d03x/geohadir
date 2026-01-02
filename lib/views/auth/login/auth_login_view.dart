@@ -1,5 +1,5 @@
 import 'package:app_mobile/extensions/theme_extension.dart';
-import 'package:app_mobile/state/auth_login_state.dart';
+import 'package:app_mobile/providers/state/auth_login_state.dart';
 import 'package:app_mobile/view_model/auth_login_view_model.dart';
 import 'package:app_mobile/widgets/input_field.dart';
 import 'package:flutter/material.dart';

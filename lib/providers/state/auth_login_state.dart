@@ -1,6 +1,10 @@
 import 'package:app_mobile/model/auth/auth_login_validation_model.dart';
+import 'package:app_mobile/model/user/user_model.dart';
 
-class AuthState {}
+class AuthState {
+  final UserModel? currentUser;
+  AuthState({this.currentUser});
+}
 
 class AuthLoginState extends AuthState {}
 

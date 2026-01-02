@@ -8,8 +8,8 @@ class SecureStorageService {
   }
 
   Future<String?> read(String key) async {
-    await _flutterSecureStorage.read(key: key);
-    return null;
+    final token = await _flutterSecureStorage.read(key: key);
+    return token;
   }
 }
 

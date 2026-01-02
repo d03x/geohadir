@@ -5,6 +5,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class AuthServices {
   final Dio dio;
   AuthServices({required this.dio});
+  Future getMe() async {
+    final authrepo = await dio.get('me');
+    return authrepo.data;
+  }
+
   Future<Map<String, dynamic>> login({
     required String email,
     required String password,
