@@ -7,6 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
 import 'package:talker_dio_logger/talker_dio_logger_settings.dart';
 
+//ini adalah bagian dari http client
 final httpClientProvider = Provider<Dio>((ref) {
   final config = ref.watch(appConfigProvider);
   final dio = Dio(

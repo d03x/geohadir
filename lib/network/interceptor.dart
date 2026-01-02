@@ -5,7 +5,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class AppInterceptor extends Interceptor {
   final Ref ref;
   AppInterceptor({required this.ref});
-
   @override
   void onRequest(
     RequestOptions options,
