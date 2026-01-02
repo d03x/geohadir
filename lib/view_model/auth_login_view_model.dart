@@ -1,6 +1,8 @@
+import 'package:app_mobile/model/auth/auth_response_model.dart';
 import 'package:app_mobile/providers/auth_provider.dart';
-import 'package:app_mobile/services/auth_services.dart';
+import 'package:app_mobile/repository/auth_repository.dart';
 import 'package:app_mobile/state/auth_login_state.dart';
+import 'package:dio/dio.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class AuthLoginViewModel extends Notifier<AuthState> {
@@ -10,12 +12,21 @@ class AuthLoginViewModel extends Notifier<AuthState> {
   }
 
   Future<void> login({required String password, required String email}) async {
-    final authServices = ref.read(authServicesProvider);
+    final authRepository = ref.read(authRepositoryProvider);
     state = AuthLoadingState();
     try {
-      await authServices.login(email: email, password: password);
+      final AuthLoginResponseModel loggedin = await authRepository.login(
+        email: email,
+        password: password,
+      );
+      print(loggedin.jwt!.accessToken);
       state = AuthState();
-    } catch (e) {
+    } on DioException catch (e) {
+      if (e.response != null) {
+        if (e.response!.statusCode == 422) {
+          state = AuthValidationErrorState.fromJson(e.response!.data);
+        }
+      }
       state = AuthState();
     }
   }

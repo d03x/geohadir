@@ -16,6 +16,13 @@ class AuthLoginView extends HookConsumerWidget {
     final emailCtrl = useTextEditingController();
     final passCtrl = useTextEditingController();
     final authState = ref.watch(authLoginViewModel);
+    ref.listen(authLoginViewModel, (prev, next) {
+      if (next is AuthValidationErrorState) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.errors!.email![0])));
+      }
+    });
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
