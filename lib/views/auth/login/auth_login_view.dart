@@ -20,7 +20,7 @@ class AuthLoginView extends HookConsumerWidget {
       if (next is AuthValidationErrorState) {
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(SnackBar(content: Text(next.errors!.email![0])));
+        ).showSnackBar(SnackBar(content: Text(next.errors!.email!.first)));
       }
     });
     return Scaffold(

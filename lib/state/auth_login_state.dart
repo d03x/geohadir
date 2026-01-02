@@ -1,5 +1,6 @@
 import 'package:app_mobile/model/auth/auth_login_validation_model.dart';
-import 'package:app_mobile/providers/auth_provider.dart';
+
+class AuthState {}
 
 class AuthLoginState extends AuthState {}
 

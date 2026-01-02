@@ -3,6 +3,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 extension AuthExtension on Ref {
   bool get isAuthenticated {
-    return watch(authProvider) is Autenticated;
+    return watch(authServicesProvider) is Autenticated;
   }
 }

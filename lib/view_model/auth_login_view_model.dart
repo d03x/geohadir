@@ -13,13 +13,14 @@ class AuthLoginViewModel extends Notifier<AuthState> {
 
   Future<void> login({required String password, required String email}) async {
     final authRepository = ref.read(authRepositoryProvider);
+    final authProvider = ref.read(authServicesProvider.notifier);
     state = AuthLoadingState();
     try {
       final AuthLoginResponseModel loggedin = await authRepository.login(
         email: email,
         password: password,
       );
-      print(loggedin.jwt!.accessToken);
+      await authProvider.saveSession(loggedin.jwt!.accessToken);
       state = AuthState();
     } on DioException catch (e) {
       if (e.response != null) {
