@@ -1,6 +1,6 @@
 import 'package:app_mobile/providers/auth_provider.dart';
 import 'package:app_mobile/services/auth_services.dart';
-import 'package:app_mobile/views/auth/state/auth_login_state.dart';
+import 'package:app_mobile/state/auth_login_state.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class AuthLoginViewModel extends Notifier<AuthState> {
