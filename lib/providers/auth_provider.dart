@@ -16,7 +16,6 @@ class AuthServices extends Notifier<AuthState> {
       final storage = ref.watch(secureStorageServiceProvider);
       await storage.write(jwtKey, token);
     }
-    return Future.error("Opps Ada kesalahan");
   }
 }
 
